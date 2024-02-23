@@ -57,6 +57,7 @@ async def process_start_command_user(message: Message, state: FSMContext, bot: B
     await asyncio.sleep(2)
     await message.answer(text=f'Для записи оставьте ваши контакты и подпишитесь на наш Телеграм-канал: '
                               f'<a href="{config.tg_bot.channel}">https://t.me/svetoch_znaniya_spb</a>',
+                         disable_web_page_preview=True,
                          parse_mode='HTML')
 
     user_channel_status = await bot.get_chat_member(chat_id=config.tg_bot.channel, user_id=message.from_user.id)
