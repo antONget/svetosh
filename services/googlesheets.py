@@ -2,7 +2,8 @@ import gspread
 # from oauth2client.service_account import ServiceAccountCredentials
 # import pandas as pd
 
-gp = gspread.service_account(filename='services/test.json')
+# gp = gspread.service_account(filename='services/test.json')
+gp = gspread.service_account(filename='services/svetoch.json')
 #Open Google spreadsheet
 gsheet = gp.open('svetoch')
 
